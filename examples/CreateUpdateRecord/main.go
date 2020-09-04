@@ -34,13 +34,11 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	fmt.Println(zoneId)
 
 	records, err := hdns.GetAllRecords(caller, zoneId)
 	if err != nil {
 		panic(err)
 	}
-	fmt.Println(records)
 
 	filteredRecords := hdns.FilterRecords(records, name, recordType)
 
